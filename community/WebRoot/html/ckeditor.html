@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ckeditor.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->	
+    <script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+	<script src="../ckeditor/ckeditor.js"></script>
+	<script src="../ckeditor/adapters/jquery.js"></script>
+	<script type="text/javascript" src="../ckeditor/ckeditor.js"></script>
+	<!-- <script type="text/javascript">
+		$(document).ready(function() {
+			$("#editor2").ckeditor();
+		});
+	</script> -->
+  </head>
+  
+  <body>
+  	<form action="../SaveArticleAction.action" method="post">
+  		title: <input type="text" id="title" name="title" />
+		<textarea class="ckeditor" cols="80" id="content" name="content" rows="10">
+		</textarea>
+		<input type="submit" id="submit" name="submit" value="submit"/>
+	</form>
+  </body>
+</html>

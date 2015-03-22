@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<!-- mapping文件用来配置entity和table -->
+    <class name="cn.aleda.hibernate.entity.User" table="t_users" catalog="community">
+    	<id name="id" column="id">
+    		<generator class="increment"></generator>
+    	</id>
+    	<property name="username" column="username"></property>
+    	<property name="password_md5" column="password_md5"></property>
+    	<property name="name" column="name"></property>
+    	<property name="mail" column="mail"></property>
+    	<property name="phone" column="phone"></property>
+    	<property name="qq" column="qq"></property>
+    	<property name="imagedir" column="imagedir"></property>
+    	<property name="filedir" column="filedir"></property>
+    </class>
+</hibernate-mapping>

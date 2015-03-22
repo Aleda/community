@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project adv-config="true">
+  <add-on id="hibernate.emanager"/>
+  <add-on id="spring.web"/>
+  <add-on id="spring.persistence"/>
+  <container path="com.genuitec.runtime.library/com.genuitec.struts_2.1">
+    <disable name="antlr-2.7.2.jar" type="jar"/>
+    <disable name="classworlds-1.1.jar" type="jar"/>
+    <disable name="sslext-1.2-0.jar" type="jar"/>
+    <disable name="oro-2.0.8.jar" type="jar"/>
+    <disable name="struts2-embeddedjsp-plugin-2.2.1.jar" type="jar"/>
+    <disable name="commons-beanutils-1.7.0.jar" type="jar"/>
+    <disable name="commons-chain-1.2.jar" type="jar"/>
+    <disable name="commons-digester-2.0.jar" type="jar"/>
+  </container>
+  <container path="com.genuitec.runtime.library/com.genuitec.spring_3.1">
+    <disable name="aspectjweaver-1.6.9.jar" type="jar"/>
+    <disable name="aopalliance-1.0.jar" type="jar"/>
+    <disable name="commons-lang-2.5.jar" type="jar"/>
+    <disable name="commons-httpclient-3.1.jar" type="jar"/>
+    <disable name="commons-fileupload-1.2.jar" type="jar"/>
+    <disable name="commons-collections-3.2.jar" type="jar"/>
+    <disable name="commons-logging-1.1.1.jar" type="jar"/>
+    <disable name="log4j-1.2.16.jar" type="jar"/>
+    <disable name="commons-beanutils-1.7.0.jar" type="jar"/>
+  </container>
+  <container path="com.genuitec.runtime.library/com.genuitec.spring_3.0">
+    <disable type="core"/>
+  </container>
+  <container path="com.genuitec.runtime.library/com.genuitec.hibernate_3.2">
+    <disable name="commons-collections-2.1.1.jar" type="jar"/>
+    <disable name="commons-logging-1.0.4.jar" type="jar"/>
+    <disable name="ehcache-1.2.3.jar" type="jar"/>
+    <disable name="jaas.jar" type="jar"/>
+    <disable name="xerces-2.6.2.jar" type="jar"/>
+    <disable name="jboss-archive-browsing.jar" type="jar"/>
+    <disable name="ejb3-persistence.jar" type="jar"/>
+    <disable name="javassist.jar" type="jar"/>
+    <disable name="jaxen-1.1-beta-7.jar" type="jar"/>
+  </container>
+</project>

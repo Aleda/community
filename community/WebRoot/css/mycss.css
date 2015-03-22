@@ -1,0 +1,291 @@
+/* CSS Document */
+
+body {/* 
+	text-align: center;  */
+	font-size: 12px;
+	background-image: url("../images/background4.jpg");
+}
+
+* { margin: 0; padding: 0; font-style: normal; font-family:Verdana, Geneva, sans-serif; font-size:24px;}
+
+#content { margin: 190px 290px auto; width: 600px; }
+#content #nav { height: 40px; margin-top: 60px; width:600px; opacity:.7;}
+#content #nav ul { list-style: none; }
+#content #nav ul li { float: left; width: 150px; line-height: 35px; position: relative; }
+
+#content #nav li .a { text-decoration: none; color: #FFFFFF; line-height: 40px; display: block;}
+#content #nav li .a:hover { color: #61d7a4;}
+
+
+/* 固定按钮（修改，提交等）的div */
+#button_pane {
+	position: absolute;
+	left: 850px;
+	top: 266px;
+	width: 350px;
+	height: 42px;
+	z-index: 10;
+	text-align: center;
+}
+
+/* 按钮样式 */
+button {
+	border: 0;
+	color: #006d4c;
+	font-size: 24px;
+	background-color: #5fd4b1;
+	height: 30px;
+	width: 100px; 
+}
+
+
+button:hover {
+	cursor:pointer;
+	background-color:#00ab76;
+}
+
+
+.button
+{
+	border:0;
+	width:80px;
+	height:25px;
+	font-size:16px;
+	background-color: #62da97;
+	color:#208051;
+	border-color: #62da97;
+	
+}
+.button:hover {
+	cursor:pointer;
+	background-color:#00ab76;
+	border-bottom-color:red;
+	
+}
+
+
+
+/* 放内容的最大的div */
+#content_pane {
+	position: absolute;
+	left: 488px;
+	top: 315px;
+	width: 713px;
+	height: 514px;
+	z-index: 4;
+	background-color: #62da97;
+	border: 1;
+}
+/* 上下页的div */
+#changepage_pane {
+	position: absolute;
+	left: 670px;
+	top: 765px;
+	width: 368px;
+	height: 60px;
+	z-index: 11;
+	text-align: center;
+}
+/* 用户名的div */
+#name_pane {
+	position: absolute;
+	left: 243px;
+	top: 558px;
+	width: 210px;
+	height: 103px;
+	z-index: 6;
+	text-align: center;
+}
+/* 头像div */
+#photo_pane {
+	position: absolute;
+	left: 250px;
+	top: 289px;
+	width: 193px;
+	height: 233px;
+	z-index: 5;
+}
+/* 左边的div */
+#info_pane {
+	position: absolute;
+	left: 200px;
+	top: 249px;
+	width: 288px;
+	height: 580px;
+	z-index: 3;
+	background-color: #208051;
+}
+
+/* 顶部div */
+#top_pane {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 1356px;
+	height: 300px;
+	z-index: 0;
+	background-image:url(../images/top.jpg);
+	
+}
+
+/* 放title的地方 */
+#title_pane {
+	position: absolute;
+	left: 488px;
+	top: 249px;
+	width: 713px;
+	height: 66px;
+	z-index: 8;
+	background:#218555;
+}
+/* title的样式 */
+#title{
+	position: absolute;
+	left: 530px;
+	top: 266px;
+	width: 359px;
+	height: 45px;
+	z-index: 9;
+	color:#CCC;
+	text-align:left;
+}
+
+/* 关于显示标题内容等的样式 */
+#titleslist {
+	position: absolute;
+	left: 80px;
+	top: 60px;
+	width: 530px;
+	height: 368px;
+	z-index: 5;
+	border: 1;
+}
+/* 显示用户登录信息的div */
+#tip {
+	position: absolute;
+	right: -10px;
+	top: 6px;
+	width: 254px;
+	height: 44px;
+	z-index: 5;
+	font-size: 18px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-style: normal;
+}
+
+#tip a {
+	text-shadow: aqua;
+	text-decoration: underline;
+	cursor: pointer;
+	color: #03562E;
+}
+
+#tip a:hover {
+	text-shadow: fuchsia;
+	color: #61d7a4;
+}
+
+#titleslist li {
+	color: #066;
+	font-size: 18px;
+	font-weight: normal;
+	text-align: left;
+	list-style: square;
+}
+
+#titleslist li a{
+	color: #066;
+	font-size: 18px;
+	font-weight: normal;
+	text-align:left;
+	text-decoration: underline;
+}
+
+#titleslist li a:hover{
+	color: #009D91;
+	font-size: 18px;
+	font-weight: normal;
+	text-align:left;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#titleslist li span{
+	position: absolute;
+	right: 0px;
+	color: #066;
+	font-size: 18px;
+	font-weight: normal;
+	text-align:left;
+}
+
+#articlelll {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 713px;
+	height: 514px;
+	z-index: 4;
+	background-color: #62da97;
+	border: 1;
+	border-style: dashed;
+}
+
+.articaltitle_pane {
+		position: absolute;
+	left: 0px;
+	top: 20px;
+	width: 713px;
+	height: auto;
+	z-index: 1;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 24px;
+	color: #006d4c;
+	text-align:center;
+}
+.articaltime_pane {
+	position: absolute;
+	left: 0px;
+	top: 60px;
+	width: 713px;
+	height: auto;
+	z-index: 2;
+	font-size: 10px;
+	font-family: "Courier New", Courier, monospace;
+	color: #006d4c;
+	text-align:center;
+}
+.articalcontent_pane{
+	position: absolute;
+	left: 50px;
+	top: 100px;
+	width: 613px;
+	height: 380px;
+	z-index: 3;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 12px;
+	color:#000;  
+	border-style: dashed;
+	border-color:#066;
+
+}
+
+/* 当出现错误删除的时候显示的hint */
+#hint {
+	position: absolute;
+	left: 685px;
+	top: 270px;
+	width: 100px;
+	height: 20px;
+	z-index: 11;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 18px;
+	color: red;  
+}
+
+.text_aleda {
+	width: 220px;
+	height: 25px;
+	font-size: 18px;
+}
+

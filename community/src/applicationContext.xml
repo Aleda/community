@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<!-- 使用spring来装配Hibernate -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation">
+			<value>classpath:hibernate.cfg.xml</value>
+		</property>
+	</bean>
+	<!-- HibernateTemplate来操作数据 -->	
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- 使用HibernateTransactionManager来管理事务 -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<!-- 使用TransactionInterceptor拦截器  -->
+	<bean id="transactionInterceptor"
+		class="org.springframework.transaction.interceptor.TransactionInterceptor">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="get*">PROPAGATION_REQUIRED, readOnly</prop>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- 事务是需要提交的，要不然的话实体类是不会写到数据库的，所以，请注意这里！如果你不交给事务去代理的话，是提交不成功的！ -->
+	<bean
+		class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<property name="beanNames">
+			<list>
+				<value>userDAO</value>
+				<value>articleDAO</value>
+				<value>websiteDAO</value>
+				<value>messageDAO</value>
+				<value>photoDAO</value>
+			</list>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>transactionInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- 装载userDAO -->
+	<bean id="userDAO" class="cn.aleda.hibernate.dao.UserDAOImpl">
+		<constructor-arg index="0">
+			<ref bean="hibernateTemplate"/>
+		</constructor-arg>
+	</bean>
+	<!-- 装载articleDAO -->
+	<bean id="articleDAO" class="cn.aleda.hibernate.dao.ArticleDAOImpl">
+		<constructor-arg index="0">
+			<ref bean="hibernateTemplate"/>
+		</constructor-arg>
+	</bean>
+	<!-- 装载websiteDAO -->
+	<bean id="websiteDAO" class="cn.aleda.hibernate.dao.WebsiteDAOImpl">
+		<constructor-arg index="0">
+			<ref bean="hibernateTemplate"/>
+		</constructor-arg>
+	</bean>
+	<!-- 装载messageDAO -->
+	<bean id="messageDAO" class="cn.aleda.hibernate.dao.MessageDAOImpl">
+		<constructor-arg index="0">
+			<ref bean="hibernateTemplate"/>
+		</constructor-arg>
+	</bean>
+	<!-- 装载photoDAO -->
+	<bean id="photoDAO" class="cn.aleda.hibernate.dao.PhotoDAOImpl">
+		<constructor-arg index="0">
+			<ref bean="hibernateTemplate"/>
+		</constructor-arg>
+	</bean>
+	<!-- 装载userService -->
+	<bean id="userService" class="cn.aleda.spring.service.UserServiceImpl">
+		<constructor-arg index="0">
+			<ref bean="userDAO"/>
+		</constructor-arg>
+	</bean>
+	<!-- 装载articleService -->
+	<bean id="articleService" class="cn.aleda.spring.service.ArticleServiceImpl">
+		<constructor-arg index="0">
+			<ref bean="articleDAO"/>
+		</constructor-arg>
+	</bean>
+	<!-- 装载websiteService -->
+	<bean id="websiteService" class="cn.aleda.spring.service.WebsiteServiceImpl">
+		<constructor-arg index="0">
+			<ref bean="websiteDAO"/>
+		</constructor-arg>
+	</bean>
+	<!-- 装载MessageService -->
+	<bean id="messageService" class="cn.aleda.spring.service.MessageServiceImpl">
+		<constructor-arg index="0">
+			<ref bean="messageDAO"/>
+		</constructor-arg>
+	</bean>
+	<!-- 装载photoService -->
+	<bean id="photoService" class="cn.aleda.spring.service.PhotoServiceImpl">
+		<constructor-arg index="0">
+			<ref bean="photoDAO"/>
+		</constructor-arg>
+	</bean>
+	<!-- 装载serviceManager -->
+	<bean id="serviceManager" class="cn.aleda.spring.service.ServiceManager">
+		<property name="userService">
+			<ref bean="userService"/>
+		</property>
+		<property name="articleService">
+			<ref bean="articleService"/>
+		</property>
+		<property name="websiteService">
+			<ref bean="websiteService"/>
+		</property>
+		<property name="messageService">
+			<ref bean="messageService"/>
+		</property>
+		<property name="photoService">
+			<ref bean="photoService"/>
+		</property>
+	</bean>
+</beans>

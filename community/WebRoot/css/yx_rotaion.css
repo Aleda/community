@@ -1,0 +1,84 @@
+﻿@charset "utf-8";
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{ font: 12px/180% Arial, Helvetica, sans-serif, "新宋体"; background-image: url("../images/background4.jpg");}
+
+.text1 {
+	font-family: "Courier New";
+	font-size: 24px;
+	color: #066;
+	position: absolute;
+	left: 25px;
+	top: 102px;
+	right: auto;
+	bottom: auto;
+	height: 40px;
+	width: 120px;
+	text-align: center;
+}
+.txtfield {
+	font-size: 20px;
+	height: 30px;
+	width: 190px;
+}
+
+.txtfield1 {
+	font-size: 20px;
+	height: 30px;
+	width: 90px;
+}
+
+.login_pane {
+	background-color: #963;
+	opacity:.3;
+}
+
+.button1 {
+	background-color: #963;
+	height: 50px;
+	width: 165px;
+	border-top-color: #960;
+	border-right-color: #960;
+	border-bottom-color: #960;
+	border-left-color: #960;
+	opacity: .4;
+	font-family: "Courier New";
+	font-size: 24px;
+	color: #000;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.table1 {
+	font-family: "Consolas";
+	font-size: 24px;
+	font-style: normal;
+	color: #066;
+}
+
+
+.login {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	font-family: "Courier New";
+	font-size: 36px;
+	color: #963;
+	right: 0px;
+	bottom: 0px;
+	z-index: 10;
+}
+
+.logo {
+	background-image: url(images/logo.jpg);
+	font-size: 80px;
+	font-style: normal;
+
+}
+#apDiv2 .logo {
+	color: #333;
+	font-weight: bold;
+}
+#apDiv1 .table1 tr td {
+	text-align: center;
+}

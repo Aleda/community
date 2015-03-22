@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<!-- mapping文件用来配置entity和table -->
+    <class name="cn.aleda.hibernate.entity.Article" table="t_articles" catalog="community">
+    	<id name="id" column="id" >
+    		<generator class="increment"></generator>
+    	</id>
+    	<property name="user_id" column="user_id"></property>
+    	<property name="username" column="username"></property>
+    	<property name="content" column="content" ></property>
+    	<property name="content_path" column="content_path" ></property>
+    	<property name="create_time" column="create_time" ></property>
+    	<property name="title" column="title" ></property>
+    </class>
+</hibernate-mapping>

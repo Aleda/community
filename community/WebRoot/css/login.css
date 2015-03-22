@@ -1,0 +1,84 @@
+#apDiv1 {
+	position: absolute;
+	left: 305px;
+	top: 200px;
+	width: 329px;
+	height: 219px;
+	z-index: 1;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: left;
+}
+#apDiv2 {
+	position: absolute;
+	left: 171px;
+	top: 62px;
+	width: 1047px;
+	height: 169px;
+	z-index: 2;
+	font-size: xx-large;
+	font-weight: bold;
+	text-align: center;
+}
+#apDiv3 {
+	position: absolute;
+	left: 16px;
+	top: 24px;
+	width: 302px;
+	height: 79px;
+	z-index: 3;
+	font-weight: bold;
+	text-align: center;
+}
+#apDiv4 {
+	position: absolute;
+	left: 832px;
+	top: 306px;
+	width: 331px;
+	height: 167px;
+	z-index: 4;
+	font-weight: bold;
+}
+#apDiv5 {
+	position: absolute;
+	left: 801px;
+	top: 459px;
+	width: 352px;
+	height: 62px;
+	z-index: 5;
+}
+#apDiv6 {
+	position: absolute;
+	left: 788px;
+	top: 191px;
+	width: 390px;
+	height: 348px;
+	z-index: 6;
+}
+#apDiv7 {
+	position: absolute;
+	left: 814px;
+	top: 266px;
+	width: 332px;
+	height: 165px;
+	z-index: 7;
+}
+#apDiv8 {
+	position: absolute;
+	left: 819px;
+	top: 219px;
+	width: 329px;
+	height: 61px;
+	z-index: 8;
+	text-align: center;
+	font-weight: bold;
+}
+#apDiv9 {
+	position: absolute;
+	left: 816px;
+	top: 452px;
+	width: 332px;
+	height: 71px;
+	z-index: 9;
+}
+

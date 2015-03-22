@@ -1,0 +1,14 @@
+#uploadphotos {
+	position: absolute;
+	left: 495px;
+	top: 255px;
+	width: 600px;
+	height: 388px;
+	z-index: 15;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 24px;
+	background-color: #006633;
+	border-style:dashed;
+	opacity: 0.88;
+	display: none;
+}

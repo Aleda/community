@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<!-- mapping文件用来配置entity和table -->
+    <class name="cn.aleda.hibernate.entity.Website" table="t_websites" catalog="community">
+    	<id name="id" column="id">
+    		<generator class="increment"></generator>
+    	</id>
+    	<property name="user_id" column="user_id"></property>
+    	<property name="user_name" column="user_name"></property>
+    	<property name="site_name" column="site_name"></property>
+    	<property name="website" column="website"></property>
+    </class>
+</hibernate-mapping>

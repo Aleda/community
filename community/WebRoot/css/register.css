@@ -1,0 +1,95 @@
+/* CSS Document */
+
+.re_table1 {
+	height: 50px;
+	width: 160px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 24px;
+	font-weight: bold;
+	color: #000;
+	text-align: center;
+}
+
+.re_table2 {
+	height: 50px;
+	width:280px;
+	list-style-type: square;
+	text-align: left;
+}
+
+.re_txtfield1 {
+	height: 28px;
+	width: 250px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	color: #FFF;
+	border-top-width: 1;
+	border-right-width: 1;
+	border-bottom-width: 1;
+	border-left-width: 1;
+	border-top-color: #630;
+	border-right-color: #630;
+	border-bottom-color: #630;
+	border-left-color: #630;
+	
+}
+.button1 {
+	background-color:#C63;
+	height: 50px;
+	width: 200px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 24px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	
+}
+
+.t_error {
+	font-size: 16px;
+	color: #C00;
+	text-align: left;
+	width: 100px;
+}
+
+
+#apDiv3 {
+	position:absolute;
+	height:530px;
+	width:550px;
+	left:490px;
+	top:70px;
+	z-index: 1;
+	background-color: #630;
+	opacity: .3;
+	display:none;
+}
+#apDiv4 {
+	position: absolute;
+	left: 510px;
+	top: 100px;
+	width: 501px;
+	height: 418px;
+	z-index: 2;
+	text-align: center;
+	display:none;
+}
+
+
+#apDiv2 table tr .t_error #t_pwd_confirm {
+	text-align: left;
+}
+
+input[type="text"] {
+	background-color:#630;
+	opacity:.4;
+}
+input[type="password"] {
+	background-color:#630;
+	opacity:.4;
+}
+#apDiv4 table tr td {
+	text-align: center;
+}
+

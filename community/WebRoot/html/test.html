@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test.html</title>
+	<meta charset="UTF-8">
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function() {
+    		$("#submit").click(function() {
+    			$.ajax({
+    				url: "../ShowArticleAction.action",
+    				success: function(data) {
+    					alert("success!");
+    					alert("size = " + data.size);
+    					alert(data.articles[0].content);
+    				}
+    			});
+    		});
+    		$("#haha li a").click(function() {
+    			alert("!!!");
+    			var txt = $(this).text();
+    			alert("txt = " + txt);
+    			alert("txt2 = " + txt2);
+    		});
+    	});
+    </script>
+    
+  </head>
+  
+  <body>
+  	<form action="../ShowArticleAction.action">
+		<input type="button" name="submit" id="submit" value="submit" />
+  	</form>
+  	<ol id="haha">
+  		<li> <a>asdasd</a> </li>
+  		<li> <a href="#">hahahahha</a>-------------<span>qwe</span></li>
+  	</ol>
+  </body>
+</html>

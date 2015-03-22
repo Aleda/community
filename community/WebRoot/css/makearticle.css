@@ -1,0 +1,23 @@
+#hint_title {
+	position: relative;
+	left: 20px;
+	font-size: 18px;
+	color: red;
+}
+
+#texteditor_pane {
+			position: absolute;
+			left: 488px;
+			top: 315px;
+			width: 713px;
+			height: 438px;
+			z-index: 7;
+			background-color: #apDiv8 {
+			position: absolute;
+			left: 488px;
+			top: 315px;
+			width: 713px;
+			height: 438px;
+			z-index: 7;
+			background-color: #218555;
+}

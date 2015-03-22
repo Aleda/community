@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.devMode" value="true"></constant>
+	<!-- 将jsp页面放在WEB—INF中，在WEB-INF的文件服务端是访问不到的 -->
+	<package name="struts2" extends="struts-default, json-default" namespace="/">
+		<!-- 将所有的jsp文件都隐藏在WEB-INF下，改变jsp的访问路径，防止用户获得jsp文件 -->
+		<action name="*_page">
+			<result>/WEB-INF/jsp/{1}.jsp</result>
+		</action>
+		<!-- 生成验证码的Action，不用任何的result，因为此action就是用来生成验证码的，其它的都不用它做 -->
+		<action name="ValidationCodeAction" class="cn.aleda.struts2.action.ValidationCodeAction">
+		</action>
+		<!-- 用户登录验证的action -->
+		<action name="LoginAction" class="cn.aleda.struts2.action.LoginAction">
+			<result name="success" type="dispatcher">/WEB-INF/jsp/main.jsp</result>
+			<result name="input" type="json"></result>
+		</action>
+		<!-- 用户注册的处理action -->
+		<action name="RegisterAction" class="cn.aleda.struts2.action.RegisterAction">
+			<result name="success">/html/registersuccess.html</result>
+			<result name="error" type="json"></result>
+			<param name="usersFilePath">D:\usersfile\</param>
+		</action>
+		<action name="Test" class="cn.aleda.struts2.action.Test">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 作者写好文章后，点击提交保存文章 -->
+		<action name="SaveArticleAction" class="cn.aleda.struts2.action.SaveArticleAction">
+			<result name="success">/WEB-INF/jsp/showarticles.jsp</result>
+			<result name="error">/WEB-INF/jsp/error.jsp</result>
+		</action>
+		<!-- 在博客界面显示作者写的所有文章 -->
+		<action name="ShowArticleAction" class="cn.aleda.struts2.action.ShowArticleAction">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 展示给作者作者所点击的文章 -->
+		<action name="DisplayOneArticleAction" class="cn.aleda.struts2.action.DisplayOneArticleAction">
+			<result name="success">/WEB-INF/jsp/displayonearticle.jsp</result>
+		</action>
+		<!-- 使用struts2实现多文件上传功能 -->
+		<action name="UploadMoreAction" class="cn.aleda.struts2.action.UploadMoreAction">
+		<!-- 引用defaultStack -->
+			<interceptor-ref name="defaultStack">
+				<!-- 设置allowedTypes的值 -->
+				<!-- <param name="fileUpload.allowedTypes">image/jpeg,image/gif,image/pjpeg</param> -->
+				<!-- 设置上传文件的最大大小 -->
+				<param name="fileUpload.maximumSize">100000000</param>
+			</interceptor-ref>
+			<result name="success">/WEB-INF/jsp/uploadfile.jsp</result>
+			<result name="input">/html/test2.html</result>
+			<!-- 这里的路径是必须存在的，struts2默认不会创建不存在的目录的 -->	
+			<param name="uploadPath">D:\usersfile\</param>	
+			<!-- <param name="allowTypes">image/jpeg,image/gif,image/pjpeg,text/plain</param> -->
+		</action>
+		<!-- 使用struts实现下载功能 -->
+		<action name="DownloadAction" class="cn.aleda.struts2.action.DownloadAction">
+			<param name="downloadPath">D:\</param>
+			<param name="usersFilePath">D:\usersfile\</param>
+			<result name="success" type="stream">
+				<param name="contentType">text/plain</param>
+				<param name="inputName">inputStream</param>
+				<param name="contentDisposition">attachment; filename='${fileName}'</param>
+				<param name="bufferSize">4096</param>
+			</result>
+		</action>
+		<!-- 将用户的文件显示在文件界面 -->
+		<action name="ShowFileAction" class="cn.aleda.struts2.action.ShowFileAction">
+			<result name="success" type="json"></result>
+			<param name="usersFilePath">D:\usersfile\</param>
+		</action>
+		<!-- 处理用户删除文件的请求的处理的action -->
+		<action name="DeleteFileAction" class="cn.aleda.struts2.action.DeleteFileAction">
+			<result name="success">/WEB-INF/jsp/uploadfile.jsp</result>
+			<param name="userFilePath">D:\usersfile\</param>
+		</action>
+		<!-- 处理用户保存网站的action -->
+		<action name="SaveSitesAction" class="cn.aleda.struts2.action.SaveSitesAction">
+			<result name="success">/WEB-INF/jsp/uploadfile.jsp</result>
+		</action>
+		<!-- 除了用户删除站点的action -->
+		<action name="DeleteSitesAction" class="cn.aleda.struts2.action.DeleteSitesAction">
+			<result name="success">/WEB-INF/jsp/uploadfile.jsp</result>
+		</action>
+		<!-- 显示所有站点的action -->
+		<action name="ShowSitesAction" class="cn.aleda.struts2.action.ShowSitesAction">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 显示所有的用户的photo -->
+		<action name="ShowPhotosAction" class="cn.aleda.struts2.action.ShowPhotosAction">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 上传用户的照片 -->
+		<action name="UploadPhotosAction" class="cn.aleda.struts2.action.UploadPhotosAcion">
+			<interceptor-ref name="defaultStack">
+				<param name="fileUpload.allowedExtensions">jpg,png,bmp,JPG,PNG,BMP</param>
+				<param name="fileUpload.maximumSize">100000000</param>
+			</interceptor-ref>
+			<result name="success">/WEB-INF/jsp/photowall.jsp</result>
+			<result name="input">/WEB-INF/jsp/error.jsp</result>
+			<param name="userFilePath">D:\usersfile\</param>
+		</action>
+		<!-- 显示小图片的action -->
+		<action name="ShowSmallAction" class="cn.aleda.struts2.action.ShowSmallAction">
+			<param name="userFilePath">D:\usersfile\</param>
+		</action>
+		<!-- 显示大图片的action -->
+		<action name="ShowBigAction" class="cn.aleda.struts2.action.ShowBigAction">
+			<param name="userFilePath">D:\usersfile\</param>
+		</action>
+		<!-- 返回所有的User -->
+		<action name="ShowUsersAction" class="cn.aleda.struts2.action.ShowUsersAction">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 返回所有的Message -->
+		<action name="ShowMessagesAction" class="cn.aleda.struts2.action.ShowMessagesAction">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 保存自己的留言 -->
+		<action name="SaveMessageAction" class="cn.aleda.struts2.action.SaveMessageAction">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 保存自己的头像 -->
+		<action name="UploadHeadImgAction" class="cn.aleda.struts2.action.UploadHeadImgAction">
+			<interceptor-ref name="defaultStack">
+				<param name="fileUpload.allowedExtensions">jpg,png,bmp,JPG,PNG,BMP</param>
+				<param name="fileUpload.maximumSize">100000000</param>
+			</interceptor-ref>
+			<result name="success">/WEB-INF/jsp/main.jsp</result>
+			<result name="input">/WEB-INF/jsp/error.jsp</result>
+			<param name="userFilePath">D:\usersfile\</param>
+		</action>
+		<action name="ShowHeadPhotoAction" class="cn.aleda.struts2.action.ShowHeadPhotoAction">
+			<param name="userFilePath">D:\usersfile\</param>
+		</action>
+		<!-- 更新看过的留言 -->
+		<action name="UpdateMessageAction" class="cn.aleda.struts2.action.UpdateMessageAction">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 删除用户的图片 -->
+		<action name="DeletePhotosAction" class="cn.aleda.struts2.action.DeletePhotosAction">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 删除用户文章 -->
+		<action name="DeleteArticlesAction" class="cn.aleda.struts2.action.DeleteArticlesAction">
+			<result name="success" type="json"></result>
+		</action>
+	</package>
+</struts>
