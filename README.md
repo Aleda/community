@@ -2,11 +2,15 @@
 ==========================================================
 ### What Is The Summer Community?
 ----------------------------------------------------------
-    summer-community is a community- based system of simple SSH framework , providing registration , published blog , upload photos, send a small piece of paper , upload files , the site features such as personalized exchange community .
+    summer-community is a community- based system of simple
+SSH framework , providing registration , published blog , 
+upload photos, send a small piece of paper , upload files ,
+the site features such as personalized exchange community .
 
 ### How To Use It?
 ----------------------------------------------------------
-    summer-community use MyEclipse development. If you want to see results. Please take the project into MyEclipse .
+    summer-community use MyEclipse development. If you want
+    to see results. Please take the project into MyEclipse .
     Then take these steps:
     step 1: Build the Database(use mysql);
         sqls: webroot/WEB-INF/sql/SQL*.sql
@@ -20,7 +24,21 @@
             
         
 ### Effects Show
+----------------------------------------------------------
+    1. main.page
+    ![Alt main.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/main.jpg)
+    2. login.page
+    ![Alt login.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/login.jpg)
+    3. photo
+    ![Alt photo.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/photo_show.jpg)
+    ![Alt photo.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/photo_show_detail.jpg)
+    4. register.page
+    ![Alt photo.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/register.jpg)
+    5. blog.page
+    ![Alt photo.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/blog_create.jpg)
+    ![Alt photo.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/blog_show.jpg)
 
 
 ### Any Question
+-----------------------------------------------------------
     If you have any questions, Please Contact Aleda(aledalee@foxmail.com | aleda.cn).
