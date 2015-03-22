@@ -26,9 +26,13 @@ the site features such as personalized exchange community .
 ### Effects Show
 ----------------------------------------------------------
     1. main.page
-    ![main.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/main.jpg)
+
+![main.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/main.jpg)
+
     2. login.page
-    ![login.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/login.jpg)
+
+![login.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/login.jpg)
+
     3. photo
     ![photo.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/photo_show.jpg)
     ![photo.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/photo_show_detail.jpg)
