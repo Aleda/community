@@ -26,17 +26,17 @@ the site features such as personalized exchange community .
 ### Effects Show
 ----------------------------------------------------------
     1. main.page
-    ![Alt main.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/main.jpg)
+    ![main.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/main.jpg)
     2. login.page
-    ![Alt login.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/login.jpg)
+    ![login.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/login.jpg)
     3. photo
-    ![Alt photo.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/photo_show.jpg)
-    ![Alt photo.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/photo_show_detail.jpg)
+    ![photo.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/photo_show.jpg)
+    ![photo.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/photo_show_detail.jpg)
     4. register.page
-    ![Alt photo.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/register.jpg)
+    ![photo.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/register.jpg)
     5. blog.page
-    ![Alt photo.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/blog_create.jpg)
-    ![Alt photo.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/blog_show.jpg)
+    ![photo.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/blog_create.jpg)
+    ![photo.page](https://raw.githubusercontent.com/Aleda/summer-community/master/summer-community_shows/blog_show.jpg)
 
 
 ### Any Question
